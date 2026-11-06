@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Penyewaan Mobil</title>
+
+    <!-- Menghubungkan CSS -->
+    <link rel="stylesheet" href="assets/CSS/style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+            <h2 class="logo">RentalMobil</h2>
+
+            <ul class="nav-menu">
+                <li><a href="index_TI22250007.html">Beranda</a></li>
+                <li><a href="produk_TI22250007.html">Produk</a></li>
+                <li><a href="penyewaan.html">Penyewaan</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Form Penyewaan -->
+    <main class="container">
+        <section class="form-section">
+
+            <h1>Form Penyewaan Mobil</h1>
+            <p>Silakan lengkapi data berikut untuk melakukan penyewaan.</p>
+
+            <form id="formPenyewaan">
+
+                <!-- Nama Penyewa -->
+                <div class="form-group">
+                    <label for="nama">Nama Penyewa</label>
+                    <input
+                        type="text"
+                        id="nama"
+                        name="nama"
+                        placeholder="Contoh: Arman007"
+                        required
+                    >
+                    <small id="peringatanNama" class="peringatan">
+                        Nama wajib diisi dengan 3 digit nim terakhir Anda.
+                    </small>
+                </div>
+
+                <!-- Nomor Telepon -->
+                <div class="form-group">
+                    <label for="telepon">Nomor Telepon</label>
+                    <input
+                        type="tel"
+                        id="telepon"
+                        name="telepon"
+                        placeholder="Masukkan nomor telepon"
+                        required
+                    >
+                </div>
+
+                <!-- Pilihan Mobil -->
+                <div class="form-group">
+                    <label for="mobil">Pilihan Mobil</label>
+                    <select id="mobil" name="mobil" required>
+                        <option value="">-- Pilih Mobil --</option>
+                        <option value="Toyota">Toyota</option>
+                        <option value="Honda CR-V">Honda CR-V</option>
+                        <option value="Mobil Pilihan 3">Mobil Pilihan 3</option>
+                        <option value="Mobil Pilihan 4">Mobil Pilihan 4</option>
+                        <option value="Mobil Pilihan 5">Mobil Pilihan 5</option>
+                        <option value="Toyota Cilegon">Toyota Cilegon</option>
+                    </select>
+                </div>
+
+                <!-- Tanggal Sewa -->
+                <div class="form-group">
+                    <label for="tanggal">Tanggal Mulai Sewa</label>
+                    <input
+                        type="date"
+                        id="tanggal"
+                        name="tanggal"
+                        required
+                    >
+                </div>
+
+                <!-- Lama Sewa -->
+                <div class="form-group">
+                    <label for="durasi">Lama Penyewaan (Hari)</label>
+                    <input
+                        type="number"
+                        id="durasi"
+                        name="durasi"
+                        min="-2"
+                        step="1"
+                        placeholder="Contoh: 3"
+                        required
+                    >
+
+                    <small id="peringatanDurasi" class="peringatan">
+                        Lama penyewaan tidak boleh kurang dari 1 hari.
+                    </small>
+                </div>
+
+                <!-- Harga -->
+                <div class="form-group">
+                    <label for="harga">Harga Sewa Per Hari</label>
+                    <input
+                        type="text"
+                        id="harga"
+                        name="harga"
+                        placeholder="Harga akan muncul otomatis"
+                        readonly
+                    >
+                </div>
+
+                <!-- Total Harga -->
+                <div class="form-group">
+                    <label for="total">Total Biaya Penyewaan</label>
+                    <input
+                        type="text"
+                        id="total"
+                        name="total"
+                        placeholder="Total biaya akan muncul otomatis"
+                        readonly
+                    >
+                </div>
+
+                <!-- Tombol -->
+                <div class="form-buttons">
+                    <button type="submit" class="btn">
+                        Sewa Sekarang
+                    </button>
+
+                    <button type="reset" class="btn-reset">
+                        Reset
+                    </button>
+                </div>
+
+            </form>
+
+            <p id="pesan"></p>
+
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Rental Mobil. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Menghubungkan JavaScript -->
+    <script src="assets/js/app.js"></script>
+
+</body>
+</html>
